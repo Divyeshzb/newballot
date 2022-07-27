@@ -1,4 +1,5 @@
 # Voting app
+env test
 
 ## About project
 
