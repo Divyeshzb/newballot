@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   ballot:
+    name: ballot
     image: ballot:latest
     ports:
       - "30040:8080"
