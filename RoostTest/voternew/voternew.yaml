@@ -1,0 +1,6 @@
+
+
+@test
+def test_check_status_code_for_roost_svc_url():
+    response = get(ROOST_SVC_URL)
+    assert response.status_code == 201
