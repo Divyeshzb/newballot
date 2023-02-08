@@ -1,0 +1,16 @@
+
+
+config:
+
+target: 'ROOST_SVC_URL'
+
+phases:
+  - duration: 10
+    arrivalRate: 1
+
+scenarios:
+  - flow:
+    - get:
+        url: '/'
+    - assert:
+        - statusCode is 201
