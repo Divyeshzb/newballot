@@ -1,26 +1,21 @@
 
 
-//Set up WebDriver
-const {Builder, By, Key, until} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
+//Create a webdriver instance
+var webdriver = require('selenium-webdriver');
 
-//Set up Chrome driver
-let o = new chrome.Options();
-o.addArguments('start-fullscreen');
-o.addArguments('disable-infobars');
-
-let driver = new Builder()
-    .setChromeOptions(o)
+//Create a chrome driver instance
+var driver = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
 
-//Navigate to the URL
+//Navigate to the ROOST_SVC_URL
 driver.get(ROOST_SVC_URL);
 
 //Retrieve the page title
-driver.getTitle().then(function(title) {
+driver.getTitle().then(function(title){
+    //Print the page title to the console
     console.log(title);
 });
 
-//Quit driver
+//Quit the driver
 driver.quit();
