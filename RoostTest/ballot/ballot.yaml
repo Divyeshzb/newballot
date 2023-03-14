@@ -1,0 +1,8 @@
+
+
+describe('Test ROOST_SVC_URL', () => {
+  it('should return a 201 status code for a GET call on the "/" endpoint', async () => {
+    const response = await fetch(process.env.ROOST_SVC_URL);
+    expect(response.status).toBe(201);
+  });
+});
