@@ -1,7 +1,7 @@
 # Ballot app
 This is ballot micro-service
 ## About project
-Divyesh Test
+Divyesh Test new
 
 
 Voting application contains various frontend and backend microservices. These microservices are deployed and are available over ingress in Roost Cluster.
