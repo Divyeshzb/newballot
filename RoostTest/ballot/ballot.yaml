@@ -1,8 +1,36 @@
+const { artillery, config } = require('artillery');
+const ROOST_SVC_URL = 'https://example.com';
+config.target = ROOST_SVC_URL;
 
+config.phases = [
+  {
+    duration: 60,
+    arrivalRate: 10
+  }
+];
 
-describe('Roost SVC URL', () => {
-  it('should return a status code of 201 when making a GET call to the "/" endpoint', async () => {
-    const response = await fetch(`${ROOST_SVC_URL}/`);
-    expect(response.status).toBe(201);
-  });
-});
+config.scenarios = [
+  {
+    name: 'Test GET / endpoint',
+    flow: [
+      {
+        get: {
+          url: '/',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      }
+    ]
+  }
+];
+
+config.assertions = [
+  {
+    expect: 'status',
+    target: '$.status',
+    value: 201
+  }
+];
+
+artillery.run(config);
