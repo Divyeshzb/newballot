@@ -13,6 +13,7 @@ An frontend application written in node to allow participants to vote.
 Depends on: ballot and ecserver services
 
 ### Ballot
+new test
 
 An backend app for voter written in Golang, to store the votes.
 
