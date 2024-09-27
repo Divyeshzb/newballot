@@ -35,7 +35,7 @@ Right-click on [Makefile](./Makefile) and choose Run
 Pattern: http://$namespace.$serviceName.$clusterPublicIP.nip.io
 
 Voter: [default.voter.10.10.0.10.nip.io](http://default.voter.10.10.0.10.nip.io)
-
+test
 ElectionCommission: [default.ec.10.10.0.10.nip.io](default.ec.10.10.0.10.nip.io)
 
 ## How to test deployed app
